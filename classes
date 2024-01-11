@@ -1,0 +1,165 @@
+<?php    
+         class Car {
+            private $make;
+            private $color;
+
+            public function __construct() {
+             $this->make = "";
+             $this->color = "";
+            }
+
+            public function setMake($name) {
+             $this->make = $name;
+            }
+
+            public function setColor($color) {
+             $this->color = $color;
+            }
+
+            public function getMake() {
+             return $this->make;
+            }
+
+            public function getColor() {
+             return $this->color;
+            }
+        }
+
+        // 1. Create an object named "bmw"
+        $bmw = new Car();
+
+        $bmw->setMake("BMW");
+        $bmw->setColor("Blue");
+
+        echo "Car Make: " . $bmw->getMake() . "<br>";
+        echo "Car Color: " . $bmw->getColor() . "<br>";
+        
+        // 2. Create an object named "kia"
+        $kia = new Car();
+
+        $kia->setMake("KIA");
+        $kia->setColor("Black");
+
+        echo "Car Make: " . $kia->getMake() . "<br>";
+        echo "Car Color: " . $kia->getColor() . "<br>";
+
+       ?>
+
+        class Car {
+
+        private $make;
+        private $color;
+
+        // 1. Constructor with appropriate access modifier:
+        public function __construct($make, $color) {
+            $this->make = $make;
+            $this->color = $color;
+            echo "I am constructor <br>";
+        }
+
+        // 2. Destructor with appropriate access modifier:
+        public function __destruct() {
+            echo "I am destructor <br>";
+        }
+
+        // 3. Methods with appropriate access modifiers for Encapsulation:
+        public function setMake($name) {
+            $this->make = $name;
+        }
+
+        public function setColor($color) {
+            $this->color = $color;
+        }
+
+        public function getMake() {
+            return $this->make;
+        }
+
+        public function getColor() {
+            return $this->color;
+        }
+        }
+        
+        // Create a Car object named "toyota":
+        $toyota = new Car("", ""); 
+        $toyota->setMake("Toyota"); 
+        $toyota->setColor("Blue"); 
+
+        // Create a Car object named "honda":
+        $honda = new Car("", ""); 
+        $honda->setMake("Honda"); 
+        $honda->setColor("White"); 
+
+        // Display the attributes of "toyota" and "honda"
+        echo "Toyota Make: " . $toyota->getMake() . "<br>";
+        echo "Toyota Color: " . $toyota->getColor() . "<br>";
+
+        echo "Honda Make: " . $honda->getMake() . "<br>";
+        echo "Honda Color: " . $honda->getColor() . "<br>";
+
+        class Animal {
+        // Declare private attributes for encapsulation
+        private $name;
+        private $color;
+    
+        // Constructor with appropriate access modifier
+        public function __construct($name, $color) {
+            $this->name = $name;
+            $this->color = $color;
+            echo "I am constructor<br>";
+        }
+    
+        // Destructor with appropriate access modifier
+        public function __destruct() {
+            echo "I am destructor<br>";
+        }
+    
+        // Methods with appropriate access modifiers for encapsulation
+        public function setName($name) {
+            $this->name = $name;
+        }
+    
+        public function setColor($color) {
+            $this->color = $color;
+        }
+    
+        public function getName() {
+            return $this->name;
+        }
+    
+        public function getColor() {
+            return $this->color;
+        }
+    
+        public function myIntro() {
+            echo "Name: " . $this->name . "<br>";
+            echo "Color: " . $this->color . "<br>";
+        }
+        }
+        
+        // Child class "Dog" inheriting from "Animal"
+        class Dog extends Animal {
+            // Additional methods or properties specific to Dog can be added here
+        }
+        
+        // Child class "Cat" inheriting from "Animal"
+        class Cat extends Animal {
+            // Additional methods or properties specific to Cat can be added here
+        }
+        
+        // Child class "Cow" inheriting from "Animal"
+        class Cow extends Animal {
+            // Additional methods or properties specific to Cow can be added here
+        }
+        
+        // Create objects for each animal and demonstrate encapsulation and inheritance
+        $dog = new Dog("Buddy", "Brown");
+        $cat = new Cat("Whiskers", "Gray");
+        $cow = new Cow("Daisy", "White");
+        
+        // Demonstrate the myIntro method for each animal
+        $dog->myIntro();
+        $cat->myIntro();
+        $cow->myIntro();
+
+?>
