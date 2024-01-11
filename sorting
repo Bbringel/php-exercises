@@ -1,0 +1,32 @@
+<?php
+       
+        $num = array("a"=>"25","b"=>25,"c"=>5,"d"=>"12","e"=>5,"f"=>15);
+        $color = array("a"=>"red","b"=>"green","c"=>"blue","d"=>"yellow","e"=>"white","f"=>"pink");
+
+        asort($num);
+        print_r($num);
+        echo "<br>";
+        
+        asort($color);
+        print_r($color);
+        echo "<br>";
+        
+        ksort($num);
+        print_r($num);
+        echo "<br>";
+        
+        ksort($color);
+        print_r($color);
+        echo "<br>";
+
+        $numbers = array(6, 4, 2, 22, 11, 25, 1, 23);
+        $cars = array("Honda", "Volvo", "BMW", "Toyota", "Kia", "Ford");
+
+        rsort($numbers);
+        print_r($numbers);
+        echo "<br>";
+        
+        rsort($cars);
+        print_r($cars);
+
+       ?>
